@@ -36,7 +36,6 @@ git clone https://github.com/LucasFerreiradeFreitas/sistema-cadastro-alunos.git
 
 3. Pronto! O sistema está funcionando.
 
-
 ## 📁 Estrutura do Projeto
 
 ```
@@ -100,8 +99,8 @@ Este projeto foi desenvolvido para praticar:
 
 **Lucas Ferreira de Freitas**
 
-- GitHub: [@SEU-USUARIO](https://github.com/LucasFerreiradeFreitas)
-- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/lucas-ferreira-freitas)
+- GitHub: [@LucasFerreiradeFreitas](https://github.com/LucasFerreiradeFreitas)
+- LinkedIn: [Lucas Freitas](https://linkedin.com/in/lucas-ferreira-freitas)
 
 ## 🚀 Próximas Melhorias
 
