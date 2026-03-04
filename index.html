@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Cadastro de Alunos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header>
+        <h1>📚 Sistema de Cadastro de Alunos</h1>
+        <p>Gerencie alunos, notas e estatísticas</p>
+      </header>
+
+      <!-- FORMULÁRIO DE CADASTRO -->
+      <section class="card">
+        <h2>➕ Cadastrar Novo Aluno</h2>
+        <form id="formCadastro">
+          <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input
+              type="text"
+              id="nome"
+              required
+              placeholder="Ex: Lucas Ferreira"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="idade">Idade:</label>
+              <input
+                type="number"
+                id="idade"
+                required
+                min="1"
+                max="120"
+                placeholder="Ex: 29"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="curso">Curso:</label>
+              <input
+                type="text"
+                id="curso"
+                required
+                placeholder="Ex: JavaScript"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Cadastrar Aluno</button>
+        </form>
+      </section>
+
+      <!-- ADICIONAR NOTAS -->
+      <section class="card">
+        <h2>📝 Adicionar Nota</h2>
+        <form id="formNota">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="alunoId">ID do Aluno:</label>
+              <input
+                type="number"
+                id="alunoId"
+                required
+                min="1"
+                placeholder="Ex: 1"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="nota">Nota (0-10):</label>
+              <input
+                type="number"
+                id="nota"
+                required
+                min="0"
+                max="10"
+                step="0.1"
+                placeholder="Ex: 8.5"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-success">Adicionar Nota</button>
+        </form>
+      </section>
+
+      <!-- BUSCAR ALUNOS -->
+      <section class="card">
+        <h2>🔍 Buscar Alunos</h2>
+        <div class="search-controls">
+          <input type="text" id="buscaNome" placeholder="Buscar por nome..." />
+          <button onclick="buscarPorNome()" class="btn btn-info">Buscar</button>
+          <button onclick="listarTodos()" class="btn btn-secondary">
+            Listar Todos
+          </button>
+          <button onclick="listarAprovados()" class="btn btn-success">
+            Aprovados
+          </button>
+          <button onclick="listarReprovados()" class="btn btn-danger">
+            Reprovados
+          </button>
+        </div>
+      </section>
+
+      <!-- ESTATÍSTICAS -->
+      <section class="card stats-card">
+        <h2>📊 Estatísticas da Turma</h2>
+        <div id="estatisticas" class="stats-grid">
+          <!-- Será preenchido pelo JavaScript -->
+        </div>
+        <button onclick="atualizarEstatisticas()" class="btn btn-info">
+          Atualizar Estatísticas
+        </button>
+      </section>
+
+      <!-- LISTA DE ALUNOS -->
+      <section class="card">
+        <h2>👥 Lista de Alunos</h2>
+        <div id="listaAlunos">
+          <p class="text-muted">Cadastre alunos para começar...</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Mensagens de Notificação -->
+    <div id="notificacao" class="notificacao"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
